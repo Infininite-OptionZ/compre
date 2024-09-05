@@ -78,7 +78,7 @@ services:
       - UWSGI_PROCESSES=${uwsgi_processes:-2}
       - UWSGI_THREADS=${uwsgi_threads:-1}
     healthcheck:
-      test: curl --fail http://localhost:8000/healthcheck || exit 1
+      test: curl --fail http://localhost:3000/healthcheck || exit 1
       interval: 10s
       retries: 0
       start_period: 0s
